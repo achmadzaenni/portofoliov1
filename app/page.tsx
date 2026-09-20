@@ -1,3 +1,4 @@
+import PageLoader from "@/app/components/pageloader";
 import HomeSection from "@/app/components/home"; 
 import SkillSection from "@/app/components/skill";
 import ExperienceSection from "./components/experience";
@@ -11,6 +12,7 @@ export default function Home() {
       <div className="pointer-events-none fixed inset-0 z-0">
         <BackgroundBeams />
       </div>
+      <PageLoader />
       <main className="relative z-10">
         {/* HOME */}
         <HomeSection />
