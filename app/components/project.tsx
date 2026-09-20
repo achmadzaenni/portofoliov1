@@ -4,13 +4,7 @@ import {
   IconBrandTailwind,
   IconBrandHtml5,
   IconBrandBootstrap,
-  IconBrandReact,
   IconBrandMysql,
-  IconBrandNodejs,
-  IconBrandGithub,
-  IconBrandGit,
-  IconBrandDocker,
-  IconBrandFigma,
 } from "@tabler/icons-react";
 
 import { DiCodeigniter, DiJqueryLogo, DiPostgresql } from "react-icons/di";
@@ -204,7 +198,7 @@ export default function ProjectSection() {
                       >
                         <Icon
                           className={`h-5 w-5 ${technology.color}`}
-                          stroke={1.8}
+                          stroke="1.8"
                         />
                       </div>
                     );

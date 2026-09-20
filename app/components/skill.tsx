@@ -195,9 +195,8 @@ export default function SkillSection() {
                   <div
                     className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-zinc-100 dark:bg-white/10 ${skill.color}`}
                   >
-                    <Icon className="h-6 w-6" stroke={1.8} />
+                    <Icon className="h-6 w-6" stroke="1.8" />
                   </div>
-
                   <span className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">
                     {skill.name}
                   </span>
@@ -206,12 +205,10 @@ export default function SkillSection() {
             })}
           </div>
         </div>
-
         <div className="mt-20">
           <h3 className="mb-6 text-xl font-semibold text-black dark:text-white">
             Tools
           </h3>
-
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {tools.map((tool) => {
               const Icon = tool.icon;
@@ -224,9 +221,8 @@ export default function SkillSection() {
                   <div
                     className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-zinc-100 dark:bg-white/10 ${tool.color}`}
                   >
-                    <Icon className="h-6 w-6" stroke={1.8} />
+                    <Icon className="h-6 w-6" stroke="1.8" />
                   </div>
-
                   <span className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">
                     {tool.name}
                   </span>
