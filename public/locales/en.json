@@ -1,0 +1,97 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "certificate": "Certificate",
+    "contact": "Contact"
+  },
+  "home": {
+    "badge": "My portfolio",
+    "greeting": "Let me introduce myself, I am",
+    "name": "Achmad Zaenni Adriansyah",
+    "description": "I'm ready to build digital solutions through technology, data, AI, and software development.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "mottoLabel": "Motto",
+    "motto": "Failures are meant to be learned from, not regretted",
+    "focusedOn": "Focused on",
+    "focus": "Tech • Data • AI"
+  },
+  "skill": {
+  "title": "Skills & Tools",
+  "description": "Some of the technologies and tools I use to build applications, process data, and develop technology-based solutions.",
+  "skillsHeading": "Skills",
+  "toolsHeading": "Tools"
+},
+"experience": {
+  "education": {
+    "title": "Experience",
+    "description": "My educational journey and experience in learning and developing technology-based solutions.",
+    "educationHeading": "Education",
+    "school": "School",
+    "educationmajor": "Software Engineering",
+    "education": "SMKS PGRI 3 Malang",
+    "educationYear": "2023 - 2026",
+    "educationDescription": "Studied the fundamentals of software development, programming, databases, web application development, as well as system design and development processes."
+  },
+  "experiences": {
+    "title": "Internship",
+    "company": "PT. Hyperdata Solusindo Mandiri",
+    "position": "Web Developer",
+    "description": "Description",
+    "experience": "Experience",
+    "year": "2024 - 2025",
+    "points": [
+      "Developed and maintained web-based applications according to system requirements.",
+      "Assisted in building and developing web application features using appropriate web technologies.",
+      "Performed debugging, error fixing, and testing of the developed application features.",
+      "Collaborated in the development process and in fulfilling web application requirements."
+    ]
+  }
+},
+"projects": {
+  "title": "Projects",
+  "description": "Some of the projects I have worked on as part of my learning process and skill development in software development, data, and artificial intelligence.",
+  "items": {
+    "convertpdf": {
+      "tag": "Document Processing",
+      "description": "An application that helps process and convert PDF documents more practically through a structured workflow."
+    },
+    "ocrapp": {
+      "tag": "OCR & AI",
+      "description": "An OCR application that recognizes and extracts text from images or documents so the information can be processed digitally."
+    },
+    "webkos": {
+      "tag": "Web Application",
+      "description": "A web-based application to help manage boarding house information, room data, and administrative needs digitally."
+    },
+    "kmsllm": {
+      "tag": "AI & LLM",
+      "description": "An AI-based project that uses a Large Language Model to help manage and search information in a Knowledge Management System."
+    },
+    "fingerpay": {
+      "tag": "Biometric System",
+      "description": "A project that combines fingerprint recognition technology with a payment system to support authentication and transactions."
+    },
+    "imagetotext": {
+      "tag": "OCR & AI",
+      "description": "An application that converts text found in images into digital text that can be read and processed again."
+    }
+  }
+},
+"certificate": {
+  "title": "Certificates"
+},
+"contact": {
+  "title": "Contact",
+  "heading": "Let's Work Together",
+  "description": "Have a project, an idea, or want to collaborate? Feel free to reach out through any of the platforms below.",
+  "contactMe": "Contact Me",
+  "viewCv": "View CV",
+  "emailSubject": "Work Together",
+  "emailBody": "Hello Achmad,\n\nI am interested in working with you. Please let me know how we can collaborate.\n\nThank you."
+}
+}

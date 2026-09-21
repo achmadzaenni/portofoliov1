@@ -1,15 +1,17 @@
+"use client";
+import { useTranslation } from "react-i18next";
 export default function ExperienceSection() {
+  const { t } = useTranslation();
   return (
     <section id="experience" className="min-h-screen scroll-mt-24 px-6 py-32">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl">
           <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-blue-500">
-            Pengalaman
+            {t("experience.education.title")}
           </h2>
 
           <p className="mt-5 text-lg leading-8 text-zinc-500 dark:text-zinc-400">
-            Perjalanan pendidikan dan pengalaman saya dalam mempelajari serta
-            mengembangkan solusi berbasis teknologi.
+            {t("experience.education.description")}
           </p>
         </div>
 
@@ -24,30 +26,28 @@ export default function ExperienceSection() {
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                   <div>
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-500">
-                      Sekolah
+                      {t("experience.education.school")}
                     </span>
                     <h3 className="mt-2 text-xl font-bold text-zinc-900 dark:text-white">
-                      SMKS PGRI 3 Malang
+                      {t("experience.education.education")}
                     </h3>
 
                     <p className="mt-1 font-medium text-zinc-600 dark:text-zinc-300">
-                      Rekayasa Perangkat Lunak
+                      {t("experience.education.educationmajor")}
                     </p>
                   </div>
                   <div className="flex flex-row md:flex-col  items-center justify-between md:justify-center gap-2">
                     <div className="w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-600 dark:bg-blue-500/10 dark:text-blue-400">
-                      Pendidikan
+                      {t("experience.education.educationHeading")}
                     </div>
                     <div className="text-sm font-medium text-zinc-600 dark:text-zinc-300">
-                      2023 - 2026
+                      {t("experience.education.educationYear")}
                     </div>
                   </div>
                 </div>
 
                 <p className="mt-5 max-w-3xl leading-7 text-zinc-500 dark:text-zinc-400">
-                  Mempelajari dasar-dasar pengembangan perangkat lunak,
-                  pemrograman, basis data, pengembangan aplikasi web, serta
-                  proses perancangan dan pengembangan sistem.
+                  {t("experience.education.educationDescription")}
                 </p>
               </div>
             </div>
@@ -59,59 +59,38 @@ export default function ExperienceSection() {
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                   <div>
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-500">
-                      magang / PKL
+                      {t("experience.experiences.title")}
                     </span>
 
                     <h3 className="mt-2 text-xl font-bold text-zinc-900 dark:text-white">
-                      PT. Hyperdata Solusindo Mandiri
+                      {t("experience.experiences.company")}
                     </h3>
 
                     <p className="mt-1 font-medium text-zinc-600 dark:text-zinc-300">
-                      Web Developer
+                      {t("experience.experiences.position")}
                     </p>
                   </div>
                   <div className="flex flex-row md:flex-col  items-center justify-between md:justify-center gap-2">
                     <div className="w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-600 dark:bg-blue-500/10 dark:text-blue-400">
-                      Pengalaman
+                      {t("experience.experiences.experience")}
                     </div>
                     <div className="text-sm font-medium text-zinc-600 dark:text-zinc-300">
-                      2024 - 2025
+                      {t("experience.experiences.year")}
                     </div>
                   </div>
                 </div>
 
                 <ul className="mt-5 space-y-3 text-zinc-500 dark:text-zinc-400">
-                  <li className="flex gap-3 leading-7">
-                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
-                    <span>
-                      Mengembangkan dan melakukan pemeliharaan aplikasi berbasis
-                      web sesuai dengan kebutuhan sistem.
-                    </span>
-                  </li>
-
-                  <li className="flex gap-3 leading-7">
-                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
-                    <span>
-                      Membantu membuat dan mengembangkan fitur pada aplikasi web
-                      menggunakan teknologi web yang sesuai.
-                    </span>
-                  </li>
-
-                  <li className="flex gap-3 leading-7">
-                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
-                    <span>
-                      Melakukan debugging, perbaikan error, serta pengujian
-                      terhadap fitur aplikasi yang dikembangkan.
-                    </span>
-                  </li>
-
-                  <li className="flex gap-3 leading-7">
-                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
-                    <span>
-                      Berkolaborasi dalam proses pengembangan dan penyelesaian
-                      kebutuhan aplikasi berbasis web.
-                    </span>
-                  </li>
+                  {(
+                    t("experience.experiences.points", {
+                      returnObjects: true,
+                    }) as string[]
+                  ).map((point, idx) => (
+                    <li key={idx} className="flex gap-3 leading-7">
+                      <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

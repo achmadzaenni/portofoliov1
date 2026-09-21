@@ -1,3 +1,5 @@
+"use client";
+import { useTranslation } from "react-i18next";
 import {
   IconBrandPython,
   IconBrandLaravel,
@@ -163,30 +165,25 @@ const tools = [
 ];
 
 export default function SkillSection() {
+  const { t } = useTranslation();
   return (
     <section id="skill" className="min-h-screen scroll-mt-24 px-6 py-32">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl">
           <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-blue-500">
-            Skills & Tools
+            {t("skill.title")}
           </h2>
-
           <p className="mt-5 text-lg leading-8 text-zinc-500 dark:text-zinc-400">
-            Beberapa teknologi dan tools yang saya gunakan dalam membangun
-            aplikasi, mengolah data, dan mengembangkan solusi berbasis
-            teknologi.
+            {t("skill.description")}
           </p>
         </div>
-
         <div className="mt-16">
           <h3 className="mb-6 text-xl font-semibold text-black dark:text-white">
-            Skills
+            {t("skill.skillsHeading")}
           </h3>
-
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {skills.map((skill) => {
               const Icon = skill.icon;
-
               return (
                 <div
                   key={skill.name}
@@ -207,12 +204,11 @@ export default function SkillSection() {
         </div>
         <div className="mt-20">
           <h3 className="mb-6 text-xl font-semibold text-black dark:text-white">
-            Tools
+            {t("skill.toolsHeading")}
           </h3>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {tools.map((tool) => {
               const Icon = tool.icon;
-
               return (
                 <div
                   key={tool.name}

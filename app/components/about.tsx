@@ -1,3 +1,5 @@
+"use client";
+import { useTranslation } from "react-i18next";
 import {
   IconBrandGithub,
   IconBrandWhatsapp,
@@ -46,24 +48,37 @@ const socialLinks = [
   },
 ];
 
+const cvfile = {
+  id: "/cv-id.pdf",
+  en: "/cv-en.pdf",
+} as const;
 export default function AboutSection() {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language === "en" ? "en" : "id";
+  const cvHref = cvfile[lang];
+
+  const mailHref =
+    "https://mail.google.com/mail/?view=cm&fs=1" +
+    "&to=achmadzaenniadriansyah1@gmail.com" +
+    `&su=${encodeURIComponent(t("contact.emailSubject"))}` +
+    `&body=${encodeURIComponent(t("contact.emailBody"))}`;
+
   return (
     <section id="about" className="min-h-screen px-6 py-32">
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-blue-500">
-          Contact
+          {t("contact.title")}
         </h2>
 
         <div className="mx-auto mt-8 w-full max-w-7xl">
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center">
             <div>
               <h3 className="text-2xl font-medium text-black dark:text-white">
-                Mari Kita Bekerja Sama
+                {t("contact.heading")}
               </h3>
 
               <p className="mt-3 max-w-xl text-zinc-500 dark:text-zinc-400">
-                Punya project, ide, atau ingin berkolaborasi? Silakan hubungi
-                saya melalui salah satu platform di bawah ini.
+                {t("contact.description")}
               </p>
             </div>
             <div className="flex items-center gap-5">
@@ -100,22 +115,22 @@ export default function AboutSection() {
           </div>
           <div className="mt-8 flex items-center gap-2">
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=achmadzaenniadriansyah1@gmail.com&su=Work%20Together&body=Hello%20Achmad%2C%0A%0AI%20am%20interested%20in%20working%20with%20you.%20Please%20let%20me%20know%20how%20we%20can%20collaborate.%0A%0AThank%20you.%0A"
+              href={mailHref}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-zinc-700 hover:shadow-lg dark:bg-white dark:text-black dark:hover:bg-zinc-200"
             >
               <IconMail className="h-5 w-5" />
-              Contact Me
+              {t("contact.contactMe")}
             </a>
             <a
-              href="/cv.pdf"
+              href={cvHref}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-800 transition-all duration-300 hover:-translate-y-1 hover:bg-zinc-100 dark:border-white/20 dark:text-white dark:hover:bg-white/10"
             >
               <IconFileText className="h-5 w-5" />
-              View CV
+              {t("contact.viewCv")}
             </a>
           </div>
         </div>

@@ -1,22 +1,24 @@
+"use client"
+import { useTranslation } from "react-i18next";
 export default function HomeSection() {
+  const { t } = useTranslation();
   return (
     <section id="home" className="flex min-h-screen items-center px-6 py-20">
       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <div>
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500 dark:text-zinc-400">
-            My portofolio
+            {t("home.badge")}
           </p>
 
           <h1 className="text-5xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-6xl lg:text-7xl">
-            Perkenalkan, saya
+            {t("home.greeting")}
             <span className="mt-2 block text-zinc-500 dark:text-zinc-400">
-              Achmad Zaenni Adriansyah
+              {t("home.name")}
             </span>
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Saya siap membangun solusi digital melalui teknologi, data, AI, dan
-            software development.
+            {t("home.description")}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -24,14 +26,14 @@ export default function HomeSection() {
               href="#project"
               className="rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-zinc-700 hover:shadow-lg dark:bg-white dark:text-black dark:hover:bg-zinc-200"
             >
-              View Projects
+              {t("home.viewProjects")}
             </a>
 
             <a
               href="#about"
               className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-800 transition-all duration-300 hover:-translate-y-1 hover:bg-zinc-100 dark:border-white/20 dark:text-white dark:hover:bg-white/10"
             >
-              Contact Me
+              {t("home.contactMe")}
             </a>
           </div>
         </div>
@@ -51,17 +53,19 @@ export default function HomeSection() {
             </div>
 
             <div className="absolute -top-5 -right-5 rounded-2xl border border-zinc-200 bg-white/90 px-5 py-3 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-zinc-900/90">
-              <p className="text-xs text-zinc-500 dark:text-zinc-400">Motto</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                {t("home.mottoLabel")}
+              </p>
               <p className="text-sm font-semibold text-zinc-900 dark:text-white">
-                Kegagalan untuk dipelajari, bukan disesali
+                {t("home.motto")}
               </p>
             </div>
             <div className="absolute -bottom-5 -left-5 rounded-2xl border border-zinc-200 bg-white/90 px-5 py-3 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-zinc-900/90">
               <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                Focused on
+                {t("home.focusedOn")}
               </p>
               <p className="text-sm font-semibold text-zinc-900 dark:text-white">
-                Tech • Data • AI
+                {t("home.focus")}
               </p>
             </div>
           </div>

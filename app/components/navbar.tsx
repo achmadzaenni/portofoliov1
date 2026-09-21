@@ -10,49 +10,58 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+import LanguageButton from "@/app/components/languagebtn";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState, useSyncExternalStore } from "react";
+import { useTranslation } from "react-i18next";
 
-const menus = [
-  { name: "Home", link: "#home" },
-  { name: "Skill", link: "#skill" },
-  { name: "Pengalaman", link: "#experience" },
-  { name: "Project", link: "#project" },
-  { name: "Sertifikat", link: "#sertifikat" },
-  { name: "Contact", link: "#about" },
-];
 const subscribe = () => () => {};
 
+const menuss = [
+  { key: "home", link: "#home" },
+  { key: "skills", link: "#skill" },
+  { key: "experience", link: "#experience" },
+  { key: "projects", link: "#project" },
+  { key: "certificate", link: "#sertifikat" },
+  { key: "contact", link: "#about" },
+];
+
 export default function Snavbar() {
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState(menus[0].link);
+  const [activeLink, setActiveLink] = useState("#home");
   const { resolvedTheme, setTheme } = useTheme();
+
   const mounted = useSyncExternalStore(
     subscribe,
     () => true,
     () => false,
   );
+
   const isDark = resolvedTheme === "dark";
   const toggleTheme = () => setTheme(isDark ? "light" : "dark");
 
+  const menus = menuss.map((item) => ({
+    name: t(`navbar.${item.key}`),
+    link: item.link,
+  }));
+
   useEffect(() => {
-    const sections = menus
-      .map((m) => document.getElementById(m.link.slice(1)))
-      .filter((el): el is HTMLElement => el !== null);
+    const sections = menuss.map((m) =>
+      document.getElementById(m.link.slice(1)),
+    ).filter((el): el is HTMLElement => el !== null);
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveLink(`#${entry.target.id}`);
-          }
+          if (entry.isIntersecting) setActiveLink(`#${entry.target.id}`);
         });
       },
       { rootMargin: "-40% 0px -55% 0px" },
     );
 
-    sections.forEach((s) => observer.observe(s));
+    sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
   }, []);
 
@@ -69,35 +78,39 @@ export default function Snavbar() {
       <NavBody>
         <NavbarLogo />
         <NavItems items={menus} activeLink={activeLink} />
-        <NavbarButton
-          as="button"
-          variant="secondary"
-          onClick={toggleTheme}
-          aria-label="Toggle theme"
-          className="relative z-20 px-2"
-        >
-          {themeIcon}
-        </NavbarButton>
+        <div className="flex items-center gap-4">
+          <LanguageButton className="relative z-20" />
+          <NavbarButton
+            as="button"
+            variant="secondary"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="relative z-20 px-2"
+          >
+            {themeIcon}
+          </NavbarButton>
+        </div>
       </NavBody>
-
       <MobileNav>
         <MobileNavHeader>
           <NavbarLogo />
           <div className="flex items-center gap-3">
-            <button
+            <LanguageButton className="text-black dark:text-white" />
+            <NavbarButton
+              as="button"
+              variant="secondary"
               onClick={toggleTheme}
               aria-label="Toggle theme"
               className="text-black dark:text-white"
             >
               {themeIcon}
-            </button>
+            </NavbarButton>
             <MobileNavToggle
               isOpen={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             />
           </div>
         </MobileNavHeader>
-
         <MobileNavMenu
           isOpen={isMobileMenuOpen}
           onClose={() => setIsMobileMenuOpen(false)}

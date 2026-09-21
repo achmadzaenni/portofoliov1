@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import I18nProvider from "@/components/i18nProvider";
 import Navbar from "./components/navbar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Achmad Porto",
+  title: "ADR Porto",
   description: "Personal Portofolio Achmad",
 };
 
@@ -32,8 +33,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          {children}
+          <I18nProvider>
+            <Navbar />
+            {children}
+          </I18nProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -1,0 +1,97 @@
+{
+  "navbar": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "skills": "Keahlian",
+    "experience": "Pengalaman",
+    "projects": "Proyek",
+    "certificate": "Sertifikat",
+    "contact": "Kontak"
+  },
+  "home": {
+    "badge": "Portofolio saya",
+    "greeting": "Perkenalkan, saya",
+    "name": "Achmad Zaenni Adriansyah",
+    "description": "Saya siap membangun solusi digital melalui teknologi, data, AI, dan software development.",
+    "viewProjects": "Lihat Proyek",
+    "contactMe": "Hubungi Saya",
+    "mottoLabel": "Motto",
+    "motto": "Kegagalan untuk dipelajari, bukan disesali",
+    "focusedOn": "Fokus pada",
+    "focus": "Tech • Data • AI"
+  },
+  "skill": {
+  "title": "Keahlian & Tools",
+  "description": "Beberapa teknologi dan tools yang saya gunakan dalam membangun aplikasi, mengolah data, dan mengembangkan solusi berbasis teknologi.",
+  "skillsHeading": "Keahlian",
+  "toolsHeading": "Tools"
+},
+"experience": {
+  "education": {
+    "title": "Pengalaman",
+    "description": "Perjalanan pendidikan dan pengalaman saya dalam mempelajari serta mengembangkan solusi berbasis teknologi.",
+    "educationHeading": "Pendidikan",
+    "school": "Sekolah",
+    "educationmajor": "Rekayasa Perangkat Lunak",
+    "education": "SMKS PGRI 3 Malang",
+    "educationYear": "2023 - 2026",
+    "educationDescription": "Mempelajari dasar-dasar pengembangan perangkat lunak, pemrograman, basis data, pengembangan aplikasi web, serta proses perancangan dan pengembangan sistem."
+  },
+  "experiences": {
+    "title": "magang / PKL",
+    "company": "PT. Hyperdata Solusindo Mandiri",
+    "postion": "Web Developer",
+    "description": "Deskripsi",
+    "experience": "Pengalaman",
+  "year": "2024 - 2025",
+   "points": [
+    "Mengembangkan dan melakukan pemeliharaan aplikasi berbasis web sesuai dengan kebutuhan sistem.",
+    "Membantu membuat dan mengembangkan fitur pada aplikasi web menggunakan teknologi web yang sesuai.",
+    "Melakukan debugging, perbaikan error, serta pengujian terhadap fitur aplikasi yang dikembangkan.",
+    "Berkolaborasi dalam proses pengembangan dan penyelesaian kebutuhan aplikasi berbasis web."
+  ]
+  }
+},
+"projects": {
+  "title": "Proyek",
+  "description": "Beberapa project yang pernah saya kerjakan sebagai bagian dari proses belajar dan pengembangan kemampuan di bidang software development, data, dan artificial intelligence.",
+  "items": {
+    "convertpdf": {
+      "tag": "Pengolahan Dokumen",
+      "description": "Aplikasi untuk membantu mengolah dan mengonversi dokumen PDF secara lebih praktis dengan proses yang terstruktur."
+    },
+    "ocrapp": {
+      "tag": "OCR & AI",
+      "description": "Aplikasi OCR untuk mengenali dan mengekstrak teks dari gambar atau dokumen sehingga informasi dapat diproses secara digital."
+    },
+    "webkos": {
+      "tag": "Aplikasi Web",
+      "description": "Aplikasi berbasis web untuk membantu pengelolaan informasi kos, data kamar, serta kebutuhan administrasi secara digital."
+    },
+    "kmsllm": {
+      "tag": "AI & LLM",
+      "description": "Project berbasis AI yang memanfaatkan Large Language Model untuk membantu pengelolaan dan pencarian informasi dalam Knowledge Management System."
+    },
+    "fingerpay": {
+      "tag": "Sistem Biometrik",
+      "description": "Project yang menggabungkan teknologi pengenalan sidik jari dengan sistem pembayaran untuk mendukung proses autentikasi dan transaksi."
+    },
+    "imagetotext": {
+      "tag": "OCR & AI",
+      "description": "Aplikasi untuk mengubah teks yang terdapat pada gambar menjadi teks digital yang dapat dibaca dan diproses kembali."
+    }
+  }
+},
+"certificate": {
+  "title": "Sertifikat"
+},
+"contact": {
+  "title": "Kontak",
+  "heading": "Mari Kita Bekerja Sama",
+  "description": "Punya project, ide, atau ingin berkolaborasi? Silakan hubungi saya melalui salah satu platform di bawah ini.",
+  "contactMe": "Hubungi Saya",
+  "viewCv": "Lihat CV",
+  "emailSubject": "Ajakan Kerja Sama",
+  "emailBody": "Halo Achmad,\n\nSaya tertarik untuk bekerja sama dengan Anda. Mohon informasikan bagaimana kita dapat berkolaborasi.\n\nTerima kasih."
+}
+}

@@ -1,3 +1,5 @@
+"use client";
+import { useTranslation } from "react-i18next";
 import {
   IconBrandPython,
   IconBrandLaravel,
@@ -11,10 +13,8 @@ import { DiCodeigniter, DiJqueryLogo, DiPostgresql } from "react-icons/di";
 
 const projects = [
   {
+    key: "convertpdf",
     name: "ConvertPDF",
-    description:
-      "Aplikasi untuk membantu mengolah dan mengonversi dokumen PDF secara lebih praktis dengan proses yang terstruktur.",
-    tag: "Document Processing",
     technologies: [
       {
         name: "Python",
@@ -39,10 +39,8 @@ const projects = [
     ],
   },
   {
+    key: "ocrapp",
     name: "OCR-App",
-    description:
-      "Aplikasi OCR untuk mengenali dan mengekstrak teks dari gambar atau dokumen sehingga informasi dapat diproses secara digital.",
-    tag: "OCR & AI",
     technologies: [
       {
         name: "Python",
@@ -62,10 +60,8 @@ const projects = [
     ],
   },
   {
+    key: "webkos",
     name: "Web Kos",
-    description:
-      "Aplikasi berbasis web untuk membantu pengelolaan informasi kos, data kamar, serta kebutuhan administrasi secara digital.",
-    tag: "Web Application",
     technologies: [
       {
         name: "Html",
@@ -85,10 +81,8 @@ const projects = [
     ],
   },
   {
+    key: "kmsllm",
     name: "KMS-LLM",
-    description:
-      "Project berbasis AI yang memanfaatkan Large Language Model untuk membantu pengelolaan dan pencarian informasi dalam Knowledge Management System.",
-    tag: "AI & LLM",
     technologies: [
       {
         name: "CodeIgniter",
@@ -108,10 +102,8 @@ const projects = [
     ],
   },
   {
+    key: "fingerpay",
     name: "FingerPay",
-    description:
-      "Project yang menggabungkan teknologi pengenalan sidik jari dengan sistem pembayaran untuk mendukung proses autentikasi dan transaksi.",
-    tag: "Biometric System",
     technologies: [
       {
         name: "Laravel",
@@ -131,10 +123,8 @@ const projects = [
     ],
   },
   {
+    key: "imagetotext",
     name: "Image-to-Text",
-    description:
-      "Aplikasi untuk mengubah teks yang terdapat pada gambar menjadi teks digital yang dapat dibaca dan diproses kembali.",
-      tag:"OCR & AI",
     technologies: [
       {
         name: "Python",
@@ -151,38 +141,36 @@ const projects = [
 ];
 
 export default function ProjectSection() {
+  const { t } = useTranslation();
   return (
     <section id="project" className="min-h-screen scroll-mt-24 px-6 py-32">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl">
           <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-blue-500">
-            Project
+            {t("projects.title")}
           </h2>
 
           <p className="mt-5 text-lg leading-8 text-zinc-500 dark:text-zinc-400">
-            Beberapa project yang pernah saya kerjakan sebagai bagian dari
-            proses belajar dan pengembangan kemampuan di bidang software
-            development, data, dan artificial intelligence.
+            {t("projects.description")}
           </p>
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <div
-              key={project.name}
+              key={project.key}
               className="group flex h-full flex-col rounded-2xl border-2 border-zinc-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-lg dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-blue-500"
             >
               <div>
                 <span className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-500">
-                  {project.tag}
+                  {t(`projects.items.${project.key}.tag`)}
                 </span>
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
                   {project.name}
                 </h3>
               </div>
-
               <p className="mt-4 flex-1 text-sm leading-7 text-zinc-500 dark:text-zinc-400">
-                {project.description}
+                {t(`projects.items.${project.key}.description`)}
               </p>
 
               <div className="mt-6 border-t border-zinc-200 pt-5 dark:border-white/10">
